@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼링크 태그</title>
+</head>
+<body>
+    <h1 id='top'>하이퍼 링크 태그</h1>
+    <!-- 
+         하이퍼링크 기능은 웹 문서가 다른 문서와 구분되는 가장 핵심적인 기능이다.
+         클릭을 통해 연결된 곳으로 이동하여 사용을 편리하게 해주는 기능으로
+         텍스트를 클릭해 이동하는 방법, 이미지를 클릭해 이동하는 방법 등이 존재한다.
+         또한 페이지 내에서 링크를 통한 이동도 가능하다.    
+    -->
+
+    <h3>a 태그를 이용한 하이퍼링크 테스트</h3>
+    <ul>
+        <li><a href="01. 글자 관련 태그.html" target='_blank'>글자관련 태그들</a></li>
+        <li>   <a href='02. 목록 관련 태그.html' target='_blank'>목록관련 태그들</a></li>
+        <li>   <a href='03. 표 관련 태그.html' target='_blank'>표 관련 태그들</a></li>
+        <li>   <a href='04. 이미지 관련 태그.html' target='_blank'>이미지 관련 태그들</a></li>
+        <li>   <a href='05.미디어 관련 태그.html' target='_blank'>미디어 관련 태그들</a></li>
+    </ul>
+
+    <h3>네트워크가 연결된 상황이라면 현재 서비스되고 있는 웹 페이지도 링크가 가능하다</h3>
+    <ul>
+        <li><a href='https://www.naver.com'>네이버</a></li>
+        <li><a href='https://www.google.com'>구글</a></li>
+    </ul>
+
+    <h3>img태그를 이용해 링크 만들기</h3>
+    <a href='실습1.레드향.html'>
+        <img src='images/salad.jpg' width='100px' alt='레드향상품정보 페이지로 이동'>
+    </a>
+
+    <h3 id='menu'>한 페이지 내에서 점프하는 앵커 만들기</h3>
+    <ul>
+        <li>
+            <!-- #id-->
+            <a href='#content1'>기사내용 1</a>
+        </li>
+        <li>
+            <!-- #id-->
+            <a href='#content2'>기사내용 2</a>
+        </li>
+        <li>
+            <!-- #id-->
+            <a href='#content3'>기사내용 3</a>
+        </li>
+    </ul>
+
+    <h4 id='content1'>기사내용 1</h4>
+    <p>
+        비가 내려 서늘했던 어제와는 달리 오늘은 낮에 기온이 크게 오르겠습니다.
+
+        한낮 기온은 서울이 22도 등 전국 대부분 지역이 20도를 웃돌아 어제보다 3도에서 최고 11도 정도나 높겠습니다.
+
+        다만 아침에는 내륙 지역 기온이 5도 아래로 떨어진 곳이 많아 쌀쌀했습니다.
+
+
+    </p>
+    <a href='#menu'>메뉴로 돌아가기</a>
+    
+    <h4 id='content2'>기사내용 2</h4>
+    <p>
+        오늘 그만큼 기온의 일교차가 최대 20도 안팎까지 매우 크게 벌어지겠습니다.
+
+        이번 주는 별다른 비 소식 없이 갈수록 낮 기온이 올라가 기온의 일교차는 계속 클 것으로 보입니다.
+
+        오전 8시를 넘어서면서 안개가 점차 사라져 이제는 파란 하늘이 드러나고 있습니다.
+    </p>
+    <a href='#top'>맨위로 돌아가기</a>
+    
+    <h4 id='content3'>기사내용 3</h4>
+    <p>
+        오늘은 전국이 대체로 맑겠고, 초미세먼지 농도는 '보통'에서 '좋음' 단계를 보이겠습니다.
+
+        낮 기온은 서울 22도, 춘천과 광주 24, 대구는 21도까지 올라가겠습니다.
+
+        동해 남부와 남해상, 제주도 해상은 풍랑주의보가 내려진 가운데 물결이 높겠는데. 특히 강원 동해안과 경상도 해안, 제주도 해안에는 높은 너울이 밀려올 수 있으니 주의해야겠습니다.
+
+        날씨 전해드렸습니다.
+    </p>
+    <a href='#menu'>메뉴로 돌아가기</a>
+
+    <h1>웹 문서에서 pdf파일 삽입하기</h1>
+    <!-- 
+        data : 파일 지정
+        width, height : 너비, 높이 지정
+    -->
+    <object width='800' height='700' data='실습1.레드향1.pdf'>
+
+    </object>
+</body>
+</html>
