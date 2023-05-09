@@ -7,26 +7,27 @@
     <title>회원가입</title>
 </head>
 <body>
+    <h1>회원가입</h1>
     <form>
         <fieldset>
             <legend>필수 입력 사항</legend>
             <table>
                 <tr>
-                    <td><b>ID</b></td>
-                    <td><input type="text" name="id" id="id" placeholder='아이디 10글자 이내'> </td>
+                    <th><b>ID</b></th>
+                    <td><input type="text" name="id" id="id" placeholder='아이디 10글자 이내' size='30'> </td>
                     <td><input type="button" value="중복확인"> </td>
                 </tr>
                 <tr>
-                    <td><b>비밀번호</b></td>
-                    <td><input type="password" name="pw" id="pw" placeholder='영문, 숫자, 특수문자 포함 8자 이상'></td>
+                    <th><b>비밀번호</b></th>
+                    <td><input type="password" name="pw" id="pw" placeholder='영문, 숫자, 특수문자 포함 8자 이상' size='30'></td>
                 </tr>
                 <tr>
-                    <td><b>비밀번호 확인</b></td>
-                    <td><input type="password" name="pwcheck" id="pwcheck"></td>
+                    <th><b>비밀번호 확인</b></th>
+                    <td><input type="password" name="pwcheck" id="pwcheck" size='30'></td>
                 </tr>
                 <tr>
-                    <td><b>Email</b></td>
-                    <td><input type="email" name="emil" id="email"></td>
+                    <th><b>Email</b></th>
+                    <td><input type="email" name="emil" id="email" size='30'></td>
                     <td>
                         <select>
                             <optgroup>
@@ -41,20 +42,29 @@
         <fieldset>
             <legend>추가 정보</legend>
             프로필 사진 : <input type="file" name="image" id="image"> 
-            <p>성별 : <input type="radio" name="gender" id="m" checked>남자
-                <input type="radio" name="gender" id="w">여자</p>
+            <p>성별 : <input type="radio" name="gender" id="m" checked>
+                <label for="m">남자</label>
+                <input type="radio" name="gender" id="w">
+                <label for='w'>여자</label> </p>
             <p>생년월일 : <input type="date" name="birth" id="birth"></p>
             <p>취미 : <br>
-                <input type="checkbox" name="hobby" id="baseball">야구
-                <input type="checkbox" name="hobby" id="basketball">농구
-                <input type="checkbox" name="hobby" id="football">축구<br>
-                <input type="checkbox" name="hobby" id="study">공부
-                <input type="checkbox" name="hobby" id="music">음악감상<br>
-                <input type="checkbox" name="hobby" id="other">기타 : <input type="text" name="other" id="other">
+                <input type="checkbox" name="hobby" id="baseball">
+                <label for='baseball'>야구</label> 
+                <input type="checkbox" name="hobby" id="basketball">
+                <label for='basketball'>농구</label> 
+                <input type="checkbox" name="hobby" id="football">
+                <label for='football'>축구</label><br>
+                <input type="checkbox" name="hobby" id="study" checked>
+                <label for='study'>공부</label>
+                <input type="checkbox" name="hobby" id="music">
+                <label for='music'>음악감상</label> <br>
+                <input type="checkbox" name="hobby" id="other">
+                <label for='other'>기타 :</label> <input type="text" name="other" id="other">
             </p>
             자기소개<br>
-            <input type="text" name="self" id="self">
+            <input type="text" name="self" id="self" style='width:350px; height:70px;'>
         </fieldset>
+        <br>
         <input type="submit" value="회원가입">
         <input type="reset" value="다시입력">
         <input type="submit" value="이전으로">
