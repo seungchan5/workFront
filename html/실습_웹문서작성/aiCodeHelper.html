@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<<<<<<< HEAD
+    <!-- This is a HTML code for a registration form with validation script -->
+    <form onsubmit="return validateForm()"> <!-- Adding onsubmit attribute with validateForm function -->
+        <label for="email">Email:</label> <!-- Label for email input field -->
+        <input type="email" id="email" name="email" required> <!-- Email input field with required attribute -->
+        <br><br>
+        <label for="name">Name:</label> <!-- Label for name input field -->
+        <input type="text" id="name" name="name" required> <!-- Name input field with required attribute -->
+        <br><br>
+        <label for="dob">Date of Birth:</label> <!-- Label for date of birth input field -->
+        <input type="date" id="dob" name="dob" required> <!-- Date of birth input field with required attribute -->
+        <br><br>
+        <input type="submit" value="Submit"> <!-- Submit button -->
+    </form>
+    
+    <script>
+        function validateForm() { // Defining the validateForm function
+            var email = document.getElementById("email").value; // Getting the value of email input field
+            var name = document.getElementById("name").value; // Getting the value of name input field
+            var dob = document.getElementById("dob").value; // Getting the value of date of birth input field
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Defining the email regular expression
+
+            if (!emailRegex.test(email)) { // Checking if email is valid
+                alert("Invalid email format!"); // Showing alert message if email is invalid
+                return false; // Returning false to prevent form submission
+            }
+
+            if (name.length < 3) { // Checking if name is less than 3 characters
+                alert("Name must be at least 3 characters long!"); // Showing alert message if name is less than 3 characters
+                return false; // Returning false to prevent form submission
+            }
+
+            var today = new Date(); // Creating a new Date object
+            var dateOfBirth = new Date(dob); // Creating a new Date object from the value of date of birth input field
+
+            if (dateOfBirth >= today) { // Checking if date of birth is after or equal to today
+                alert("Date of birth must be before today!"); // Showing alert message if date of birth is after or equal to today
+                return false; // Returning false to prevent form submission
+            }
+
+            return true; // Returning true to allow form submission if all conditions are met
+        }
+    </script>
+=======
+    코드를 작성할 명령문장을 작성
+    회원가입화면 만들어줘
+    이메일
+    이름
+    생년월일
+
+
+    문장선택후 단축키를 이용해서 코드를 생성
+    ctrl + alt + shift + z
+
+    생성된 코드를 선택 한 후 다시 명령을 입력 하기 위해 단축키 입력
+    ctrl + alt + shift + , 
+
+    스크립트로 유효성검사 해줘입력
+
+
+    <script>
+    const form = document.querySelector('form');
+    const email = document.getElementById('email');
+    const name = document.getElementById('name');
+    const dob = document.getElementById('dob');
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // prevent form submission
+        
+        if (!validateEmail(email.value)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+        
+        if (!validateName(name.value)) {
+            alert('Please enter a valid name');
+            return;
+        }
+        
+        if (!validateDOB(dob.value)) {
+            alert('Please enter a valid date of birth');
+            return;
+        }
+        
+        // form validation passed, submit form
+        form.submit();
+    });
+    
+    function validateEmail(email) {
+        // email validation logic
+    }
+    
+    function validateName(name) {
+        // name validation logic
+    }
+    
+    function validateDOB(dob) {
+        // date of birth validation logic
+    }
+</script>
+>>>>>>> 1d872c7450fcd4c34040cf2af3359351d0587bb4
+</body>
+</html>
