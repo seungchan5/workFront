@@ -76,12 +76,98 @@
 <hr>
 <h2> 텍스트와 관련된 input 태그들</h2>
 <form>
+    <ul>
     <!--
         type='text' : 한 줄짜리 텍스트를 입력할 수 있는 텍스트 박스
     -->
+    <li>
     아이디 : <input type='text' name='userId' size='20' maxlength='15' placeholder='아이디를 입력해주세요' required>
+    </li>
+    <!--
+        type='password'
+        비밀번호를 입력할 수 있는 텍스트 상자
+        사용자의 입력 값을 확일할 수 없다
+    -->
+    <li>
+    비밀번호 : <input type='password' name='userPw' required size='20' maxlength='15' placeholder='비밀번호를 입력하세요'>
+    </li>    
+    <!--
+        type="email"
+        submit될때 이메일 형식을 체크해줍니다
+    -->
+    <li>
+    이메일 : <input type="email" name="userEmail" id="userEmail" placeholder='이메일을 입력해주세요'>
+    </li>
+    <li>
+        <!--
+            type="url"
+            submit될때 http:// https:// 가 붙어있는지 확인
+        -->
+        홈페이지 : <input type="url" name="homepage" value='https://' placeholder='홈페이지를 입력해주세요'> </li>
+    <li>
+        검색 : <input type="search" name="searchText" id="searchText" placeholder='검색할 내용 입력'>
+    </li>
+    
+    <!-- datalist 태그
+        텍스트 필드에서 데이터 목록 중 값을 선택하여 입력
+    -->
+    <li>
+        색상 : <input type="text" name="color" list='myColor'>
+        
+        <datalist id ='myColor'>
+            <option value='black'>검정색</option>
+            <option value='white'>흰색</option>
+            <option value='skyblue'>하늘색</option>
+        </datalist>
 
+    </li>
+    </ul>
+    <input type="submit" value="전송">
+    <!-- 폼 안의 입력 요소들을 모두 초기화 -->
+    <input type="reset" value="초기화">
 </form>
 
+<h3>숫자와 관련된 input 태그들</h3>
+<form>
+<!--
+    type='number'
+    입력창에 숫자를 입력하는 것이 기본이지만,
+    브라우저에 따라서 스핀 박스가 표시되기도 한다.
+    (스핀 박스 : 입력창 오른쪽에 위/아래 화살표 버튼)
+-->
+    <input type="number" name="amount" id="amount" value='0' min='0' max='100' step='5'>
+    <br>
+    <!--
+        type='range' : 슬라이드바를 통한 숫자 지정 기능 
+    -->
+    <input type="range" name="point" id="point" min='0' max='1000' step='100' value='300'>
+
+    <br>
+    <input type="submit" value="전송">
+    <input type="reset" value="초기화">
+
+</form>
+<h3>날짜/시간 관련 input 태그들</h3>
+<form>
+    <!-- type="date|month|week|time|datetime|datetime_local"-->
+    date : <input type="date" name="date" id="date">
+            <input type="date" name='date' id='date' value='2023-05-09'>
+    <br>
+    month : <input type="month" name="month" id="month">
+            <input type="month" name="month" id="month" value='2023-05'>
+    <br>
+    time : <input type="time" name="time" id="time">
+            <input type="time" name="time" id="time" value='10:42'>
+    <br>
+    datetime : 크롬, ie, 엣지에서 지원되지 않음 -> datetime-local로 대체
+    <br>
+    <input type="datetime" name="dt" id="dt">
+    <br>
+    datetime-local : <input type="datetime-local" name="dtl" id="dtl">
+    <br>
+    week : <input type="week" name="week" id="week">
+    <input type="submit" value="전송">
+    <input type="reset" value="초기화">
+</form>
 </body>
 </html>
