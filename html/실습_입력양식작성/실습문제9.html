@@ -13,26 +13,28 @@
             <legend>필수 입력 사항</legend>
             <table>
                 <tr>
-                    <th><b>ID</b></th>
-                    <td><input type="text" name="id" id="id" placeholder='아이디 10글자 이내' size='30'> </td>
+                    <th><b><label for='userId'>ID</label></b></th>
+                    <td><input type="text" name="userId" id="userId" placeholder='아이디 10글자 이내' size='30'> </td>
                     <td><input type="button" value="중복확인"> </td>
                 </tr>
                 <tr>
-                    <th><b>비밀번호</b></th>
-                    <td><input type="password" name="pw" id="pw" placeholder='영문, 숫자, 특수문자 포함 8자 이상' size='30'></td>
+                    <th><b><label for='userPw'>비밀번호</label></b></th>
+                    <td><input type="password" name="userPw" id="userPw" placeholder='영문, 숫자, 특수문자 포함 8자 이상' size='30'></td>
                 </tr>
                 <tr>
-                    <th><b>비밀번호 확인</b></th>
-                    <td><input type="password" name="pwcheck" id="pwcheck" size='30'></td>
+                    <th><b><label for='password'>비밀번호 확인</label> </b></th>
+                    <td><input type="password" name="password" id="password" size='30'></td>
                 </tr>
                 <tr>
-                    <th><b>Email</b></th>
-                    <td><input type="email" name="emil" id="email" size='30'></td>
+                    <th><b><label for='userEmail'>Email</label></b></th>
+                    <td><input type="email" name="userEmil" id="userEmail" size='30'></td>
                     <td>
-                        <select>
+                        <select name='emailAddr' id='emailAddr'>
                             <optgroup>
-                                <option selected>직접입력</option>
-                                <option>naver.com</option>
+                                <option value='etc' label='직접입력' selected>직접입력</option>
+                                <option value='naver.com' label='naver.com'>naver.com</option>
+                                <option value='gmail.com' label='gmail.com'>gmial.com</option>
+                                <option value='daum.net' label='daum.net'>daum.net</option>
                             </optgroup>
                         </select>
                     </td>
@@ -41,33 +43,49 @@
         </fieldset>
         <fieldset>
             <legend>추가 정보</legend>
-            프로필 사진 : <input type="file" name="image" id="image"> 
-            <p>성별 : <input type="radio" name="gender" id="m" checked>
-                <label for="m">남자</label>
-                <input type="radio" name="gender" id="w">
-                <label for='w'>여자</label> </p>
-            <p>생년월일 : <input type="date" name="birth" id="birth"></p>
-            <p>취미 : <br>
-                <input type="checkbox" name="hobby" id="baseball">
+            <ul>
+                <li>
+                    <label for='addFile'>프로필 사진 : </label><input type="file" name="addFile" id="addFile"> 
+                </li>
+                <li>
+                    <label for='gender'>성별 : </label>  
+                    <input type="radio" name="gender" id="m" checked>
+                    <label for="m">남자</label>
+                    <input type="radio" name="gender" id="w">
+                    <label for='w'>여자</label>
+                </li>
+                <li>
+                    <label for='birth'> 생년월일 : </label><input type="date" name="birth" id="birth">
+                </li>
+                <li>
+                취미 : <br>
+                <input type="checkbox" name="hobby" id="baseball" value='baseball'>
                 <label for='baseball'>야구</label> 
-                <input type="checkbox" name="hobby" id="basketball">
+                <input type="checkbox" name="hobby" id="basketball" value='basketball'>
                 <label for='basketball'>농구</label> 
-                <input type="checkbox" name="hobby" id="football">
+                <input type="checkbox" name="hobby" id="football" value='football'>
                 <label for='football'>축구</label><br>
-                <input type="checkbox" name="hobby" id="study" checked>
+                <input type="checkbox" name="hobby" id="study" value='study' checked>
                 <label for='study'>공부</label>
-                <input type="checkbox" name="hobby" id="music">
-                <label for='music'>음악감상</label> <br>
-                <input type="checkbox" name="hobby" id="other">
-                <label for='other'>기타 :</label> <input type="text" name="other" id="other">
-            </p>
-            자기소개<br>
-            <input type="text" name="self" id="self" style='width:350px; height:70px;'>
+                <label>
+                <input type="checkbox" name="hobby" id="music" value='music'>
+                음악감상
+                </label> <br>
+                <input type="checkbox" name="hobby" id="other" value='etc'>
+                <label for='other'>기타 :</label> <input type="text" name="etcTxt" id="etcTxt">
+                </li>
+                <li>
+                <label for='introduce'></label> 자기소개<br>
+                <textarea name="introduce" id="introduce" cols='50' rows='5' style='resize:none;'></textarea>
+                </li>
+            </ul>
+            
+            
         </fieldset>
         <br>
         <input type="submit" value="회원가입">
         <input type="reset" value="다시입력">
-        <input type="submit" value="이전으로">
+        <input type="button" value="이전으로">
     </form>
 </body>
 </html>
