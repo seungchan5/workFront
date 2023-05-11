@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        p{
+            width: 500px;
+            height: 300px;
+            /* #000 검정 #111 #222 #333 ... 
+                #999 16진수이므로 다음은 a(10)~f(16)
+                #aaa #bbb #ccc
+                #fff 흰색*/
+            background-color: #eee; 
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+        #static{
+            /*기본값*/
+            position: static;
+        }
+        #relative-1{
+            position: relative;
+        }
+        #relative-2{
+            position: relative;
+            /*왼쪽에서 100px 떨어지게*/
+            left: 100px;
+            /*위에서 -50px 떨어지게(음수면 위로 이동)*/
+            top: -50px;
+        }
+        #fixed{
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-color: #222;
+            /* 오른쪽에서 30px 떨어지게 */
+            right: 30px;
+            top: 30px;
+        }
+        #first{
+            width:300px;
+            height: 300px;
+            background-color: yellow;
+        }
+        #second{
+            width: 200px;
+            height: 200px;
+            background-color: seagreen;
+            position: absolute;
+            top:50px;
+            left:50px;
+        }
+        #third{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top:100px;
+            left:100px;
+        }
+        #outer{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h2>포지셔닝</h2>
+    CSS를 이용해서 여러 요소를 적절하게 배치하는 것
+    <div id='outer'>
+    <p id='first'></p>
+    <p id='second'></p>
+    <p id='third'></p>
+    </div>
+    <p id='static'>
+        Minim Lorem aliqua eiusmod occaecat quis eu laborum. Exercitation ea ex do irure Lorem proident dolor et nulla dolore duis velit voluptate. Cillum laborum consequat ex id veniam id sunt magna mollit exercitation ullamco pariatur. Duis excepteur non proident ex.
+
+Laborum anim voluptate mollit ex veniam anim aliquip. Fugiat tempor cupidatat consectetur id culpa minim sit nostrud non veniam commodo sunt anim. Occaecat Lorem in irure proident officia dolore non id cillum aliqua consectetur.
+
+Laborum do ea velit aliqua ullamco culpa laborum veniam aliqua exercitation esse. Dolor quis quis aliquip et sint fugiat aliquip laboris nostrud cupidatat do tempor in. Mollit labore sunt aute irure aliqua. Officia reprehenderit anim est quis ullamco proident deserunt consectetur consequat duis ex ex. Quis commodo aliquip cupidatat nulla fugiat nisi duis reprehenderit fugiat consectetur.
+    </p>
+    <p>
+        Ad proident ut eiusmod mollit enim ad occaecat non cupidatat ad consectetur minim.
+    </p>
+    <p>
+        Pariatur officia exercitation fugiat aute esse consectetur anim incididunt nostrud reprehenderit duis.
+    </p>
+
+    <p>
+        Deserunt aliquip do tempor quis mollit eu ut.
+    </p>
+    <p id='relative-1'>
+        Dolor et aliqua ullamco esse ad fugiat proident labore Lorem in. Adipisicing pariatur eiusmod ad et eiusmod ea reprehenderit consectetur. Commodo sit officia elit labore dolore anim commodo et sint amet cillum amet eu sit. Commodo reprehenderit consectetur cupidatat veniam pariatur quis consectetur magna do. Et anim aute laborum proident fugiat proident.
+
+Adipisicing magna nulla amet laborum laboris esse pariatur in anim aliqua nulla amet nulla magna. Quis pariatur quis dolor laborum anim magna id ea tempor aliqua aliquip consequat non. Reprehenderit nostrud duis non consectetur amet aliquip ea eiusmod. Duis duis do id qui magna consectetur.
+
+Anim et eiusmod sit cupidatat culpa. Cillum commodo minim consequat dolore ullamco ullamco aliquip consectetur reprehenderit deserunt ipsum nisi nisi voluptate. Sit ex nulla et id incididunt aliquip velit officia minim ad sit. Ipsum exercitation consectetur eu enim. Fugiat aliqua commodo quis sit id irure aliqua Lorem. Nisi veniam nisi nostrud tempor adipisicing incididunt aliqua laborum in officia sint ex. Magna quis pariatur quis tempor tempor exercitation aliquip.
+    </p>
+    <p id='relative-2'>Excepteur irure sit exercitation exercitation est deserunt id ipsum velit do labore laboris fugiat sint. Nisi nulla nisi ipsum laborum in. Ad quis adipisicing cillum ut nostrud sunt ut Lorem dolor. Proident quis tempor reprehenderit enim laboris qui reprehenderit cillum.
+
+Irure occaecat ipsum deserunt dolore mollit eiusmod. Excepteur aute ea aute anim sunt. Deserunt id eu aliqua adipisicing laborum duis enim non fugiat in do qui. Nostrud labore nostrud exercitation sint qui anim elit voluptate reprehenderit irure ullamco pariatur. Nulla eiusmod occaecat ex nisi non nostrud aliquip aliqua laboris. Et ipsum labore elit eu elit exercitation. Officia minim labore dolore irure velit.
+
+Aliqua duis laborum pariatur anim pariatur voluptate. Dolor tempor elit dolore laboris ut ad officia aliquip commodo qui. Dolore laborum ullamco esse culpa enim nostrud Lorem nisi magna excepteur. Veniam enim eu consequat adipisicing aliquip quis nisi ex tempor minim eiusmod dolor amet sit. Anim officia amet proident in nulla ipsum reprehenderit ad ex sint nisi anim aliquip ullamco.</p>
+<p id='fixed'></p>
+</body>
+</html>
