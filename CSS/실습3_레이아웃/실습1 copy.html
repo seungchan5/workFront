@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+        .wrap{
+            width: 1000px;
+            height: 800px;
+            background-color: aqua;
+            margin: 0px auto;
+        }
+        header{
+            width: 1000px;
+            height: 150px;
+            background-color: blue;
+
+        }
+        #small{
+            width: 300px;
+            height: 110px;
+            background: url(images/logo.jpg)no-repeat;
+            background-size: 100% 100%;
+            float: left;  
+        }
+        #big{
+            width:700px;
+            height: 110px;
+            background: url(images/mainlogo.jpg) no-repeat;
+            background-size: 100% 100%;
+            float: left;
+        }
+        nav{
+            width:1000px;
+            height: 40px;
+            background-color: rgb(119, 185, 19);
+            float: left;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0px;
+        }
+        nav ul li{
+            width : 250px;
+            height : 40px;
+            float: left;
+            text-align: center;
+            padding: 7px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div id='small'></div>
+            <div id='big'></div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Profile</li>
+                    <li>Board</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="main">
+            <aside></aside>
+            <main></main>
+            <aside></aside>
+        </div>        
+        <footer></footer>
+    </div>
+</body>
+</html>
