@@ -55,6 +55,60 @@
             padding: 7px;
             color: white;
         }
+        #left{
+            width: 250px;
+            height : 550px;
+            background: url(images/left_img.jpg) no-repeat;
+            background-size: 95% 95%;
+            background-position: center left;
+            float: left;
+        }
+        #right{
+            width: 250px;
+            height: 550px;
+            border: 1px solid black;
+            float: right;
+        }
+        main{
+            width: 500px;
+            height: 550px;
+            float: left;
+        }
+        #box1{
+            width: 250px;
+            height: 50%;
+            border: 1px solid black;
+            float: left;
+            text-align: center;
+            
+        }
+        #box2{
+            width: 250px;
+            height: 50%;
+            border: 1px solid black;
+            float: left;
+        }
+        #box3{
+            width: 250px;
+            height: 50%;
+            float: left;
+            border: 1px solid black;
+        }
+        #box4{
+            width: 250px;
+            height: 50%;
+            float: left;
+            border: 1px solid black;
+        }
+        
+
+
+        footer{
+            width: 1000px;
+            height : 100px;
+            background:url(images/footer.jpg);
+            float: left;
+        }
     </style>
 </head>
 <body>
@@ -73,9 +127,14 @@
         </header>
         
         <div class="main">
-            <aside></aside>
-            <main></main>
-            <aside></aside>
+            <aside id='left'></aside>
+            <main>
+                <div id='box1'><img src="images/main_img1.jpg" alt="나무"> 나무를 심는 사람들</div>
+                <div id='box2'>아이들에게 녹색미래를..</div>
+                <div id='box3'>설악산을 살리는 길</div>
+                <div id='box4'>사라지는 북극곰들</div>
+            </main>
+            <aside id='right'></aside>
         </div>        
         <footer></footer>
     </div>
