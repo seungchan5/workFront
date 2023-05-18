@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            color: #333;
+        }
+        .wrap{
+            width: 1000px;
+            height: 800px;
+            /* background-color: aqua; */
+            margin: 0px auto;
+        }
+        .wrap header{
+            width: 100%;
+            height: 200px;
+            /* background-color: blue; */
+            position: relative;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .wrap header .search{
+            /* background-color: blueviolet; */
+            width: 100%;
+            height: 150px;
+            border: 1px solid #333;
+            margin-bottom: 10px;
+        }
+        .gg{
+            width:350px;
+            height:30px;
+            margin-top: 60px;
+            margin-left: 300px;
+            /* border: 1px solid black; */
+        }
+        .wrap header .search .gg input[type=search]{
+            width: 270px;
+            height: 30px;
+            float: left;
+        }
+        .wrap header .search .gg input[type=submit]{
+            width: 80px;
+            height: 30px;
+            background: url(image/search.png) no-repeat center center;
+            background-size: contain;
+            background-color: white;
+        }
+        .wrap header .category{
+            /* background-color: violet; */
+            width: 100%;
+            height: 50px;
+            border: 1px solid #333;
+        }
+        .category ul{
+            padding: 0px;
+        }
+        .category ul li{
+            /* border: 1px solid black; */
+            float: left;
+            width: 20%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.1em;
+            font-weight: 800;
+            color: #333;
+        }
+        main{
+            width: 100%;
+            height: 500px;
+            /* background-color: red; */
+        }
+        .left{
+            width:70%;
+            height:100%;
+            /* background-color: orange; */
+            float: left;
+        }
+        .left .box1{
+            width: 100%;
+            height: 30%;
+            border: 1px solid black;
+            margin-bottom: 10px;
+
+        }
+        .box1>img{
+            width: 100%;
+            height: 100%;
+        }
+        .left .box2{
+            width: 100%;
+            height: 10%;
+            border: 1px solid black;
+            /* background-color: aqua; */
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .box2-1{
+            float: left;
+        }
+        .box2-2> ul{
+            float: right;
+        }
+        .box2>.box2-2 li{
+            /* border: 1px solid black; */
+            float: left;
+            padding: 0px 5px;
+        }
+        .left .box3{
+            width: 100%;
+            height: 60%;
+            border: 1px solid black;
+            /* background-color: rebeccapurple; */
+        }
+        .box3 img{
+            width: 100%;
+            height: 100%;
+        }
+        .right{
+            width: 30%;
+            height: 100%;
+            /* background-color: yellow; */
+            float: right;
+
+        }
+        .login_form{
+            width: 100%;
+            height: 30%;
+            border: 1px solid black;
+            /* background-color: blue; */
+            margin-bottom: 10px;
+        }
+        .login{
+            width: 100%;
+            height: 80%;
+            /* background-color: red; */
+        }
+        .login>#id, .login>#pw{
+            width:70%;
+            height:50%;
+            float: left;
+        }
+        .login>#submit{
+            width:30%;
+            height: 100%;
+        }
+        .link{
+            width: 100%;
+            height: 20%;
+            /* background-color: yellow; */
+            
+        }
+        .link ul{
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+        .link li{
+            float: left;
+            padding: 0px 5px;
+
+        }
+        .no{
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .shopping{
+            width: 100%;
+            height: 70%;
+            border: 1px solid black;
+        }
+        .shopping>img{
+            width:100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class='wrap'>
+        <header>
+            <div class='search'>
+                <div class='gg'>
+                <form id='search_form' action="">
+                    <input type="search" name="" id="text">
+                    <input type="submit" value="" id='submit'>
+                </form>
+                </div>
+            </div>
+            <div class='category'>
+                <ul>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">교육원소개</a></li>
+                    <li><a href="#">취업지원센터</a></li>
+                    <li><a href="#">산학연계</a></li>
+                    <li><a href="#">상담센터</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <aside class='left'>
+                <div class="box1"><img src="image/banner.PNG" alt=""></div>
+                <div class="box2">
+                    <div class='box2-1'>안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다.</div>
+                    <div class='box2-2'>
+                        <ul class='news'>
+                            <li><a href="#" class="">경제</a></li>
+                            <li><a href="#" class="">연예</a></li>
+                            <li><a href="#" class="">사회</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box3"><img src="image/car.PNG" alt=""></div>
+            </aside>
+            <aside class='right'>
+                <div class='login_form'>
+                    <div class='login'>
+                        <input type="text" name="" id="id" placeholder='아이디를 입력하세요'>
+                        <input type="password" name="" id="pw" placeholder='비밀번호를 입력하세요'>
+                        <input type="submit" value="로그인" id='submit'>
+                    </div>
+                    <div class='link'>
+                        <ul>
+                            <li><a href="#" class="">아이디찾기</a></li>
+                            <li  class='no'><a href="#" class="">비밀번호찾기</a></li>
+                            <li><a href="#" class="">회원가입</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='shopping'><img src="image/shopping.PNG" alt=""></div>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
