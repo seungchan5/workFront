@@ -103,7 +103,7 @@ function test(){
     console.log('g_str2', g_str2); // 지역변수에서 전역변수와 같은 이름으로 재선언
 
     // 블럭레벨 스코프 테스트
-    if(test){
+    if(true){
         b_str1 = '블럭선언'; // 전역
         var b_str2 = '블럭선언 var'; // 함수
         let b_str3 = '블럭선언 let'; // 블럭
