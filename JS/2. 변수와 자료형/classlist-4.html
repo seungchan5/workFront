@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <button id="mode">모드 변경</button>
   <h1 id="title">My Profile</h1>
   <div id="profile">
     <img src="images/pf.png" alt="도레미">
@@ -19,5 +20,34 @@
     </div>
   </div>
 
+<script>
+  title.onclick=()=>{
+    // 1. 클릭시 class속성에 clicked를 추가
+    // title.classList.add('clicked');
+
+    // 2. class속성에 포함되어 있는지 확인 후 
+    // 없으면 추가, 있으면 삭제
+    // if(!title.classList.contains('clicked')){
+    //   title.classList.add('clicked');
+    // } else {
+    //   title.classList.remove('clicked');
+    // }
+
+    // 3. toggle
+    title.classList.toggle('clicked');
+  }
+
+  const userName = document.querySelector('#desc p');
+  // 실습
+  userName.onclick = () =>{
+    userName.classList.toggle('blue-italic');
+  };
+
+  let mode = document.querySelector('#mode');
+  mode.onclick = () =>{
+    Document.body.classList.toggle('dark');
+  };
+  
+</script>
 </body>
 </html>
