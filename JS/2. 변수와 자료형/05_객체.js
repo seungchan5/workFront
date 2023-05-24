@@ -13,17 +13,37 @@ window.onload = () =>{
         console.log('product : ',product);
         area1.innerHTML = '객체 선언 테스트';
         area1.innerHTML += `객체명['속성명']으로 접근하는 방법 <br>`;
-        area1.innerHTML += `객체명.속성명 으로 접근하는 방법 <br>`;
-        });
+        area.innerHTML += `product[0] : ${product[0]}<br>`
+        area.innerHTML += `product['pName'] : ${product['pName']}<br>`
+        area.innerHTML += `product['price'] : ${product['price']}<br>`
+        area.innerHTML += `product['brand'] : ${product['brand']}<br>`
+        area.innerHTML += `product['spec'][0] : ${product['spec'][0]}<br>`
+        area.innerHTML += `product['spec'][1] : ${product['spec'][1]}<br><br>`
 
-        // 속성명에 공백이나 특수 문자가 입력된 경우 '', ""로 묶어 주어야하며
-        // .을 이용해서 접근이 불가능 하다.
+        area1.innerHTML += `객체명.속성명 으로 접근하는 방법 <br>`;
+        area.innerHTML += `product.pName : ${product.pName} <br>`;
+        area.innerHTML += `product.price : ${product.price} <br>`;
+        area.innerHTML += `product.brand : ${product.brand} <br>`;
+        area.innerHTML += `product.spec[0] : ${product.spec[0]} <br>`;
+        area.innerHTML += `product.spec[1] : ${product.spec[1]} <br>`;
+
+
+        // 속성명에 공백, 특수문자가 입력된 경우 '', ""로 묶어 주어야 하며
+        // .을 이용해서 접근이 불가능 하다
         // []를 이용해서 값을 가져올 수 있다.
         let user = {
-            'user name' : '문인수',
-            user_age : 20,
-            'id!!' : 'ismoon'
+            'user name' : '문인수'
+            , user_age : 20
+            , 'id!!' : 'ismoon'
         };
+
+        area.innerHTML += `공백이나 특수문자가 속성명에 있는 경우 대괄호를 이용해서 값을 가져올 수 있다. <br>`;
+        // area.innerHTML += `user.user name : ${user.user name} <br>'; ERR
+        area.innerHTML += `user['user name'] : ${user['user name']} <br>`;
+        area.innerHTML += `user.user_age : ${user.user_age} <br>`;
+        area.innerHTML += `user['id!!'] : ${user['id!!']} <br>`;
+
+    });
 
         btn2.addEventListener('click', ()=>{
             let name = '고경희';
@@ -77,6 +97,7 @@ window.onload = () =>{
             };
             console.log(student);
             console.log(student.whoAreYou());
+            
             // 객체에 해당 속성이 정의되어 있으면 true
             // 없으면 false
             console.log('job' in student);

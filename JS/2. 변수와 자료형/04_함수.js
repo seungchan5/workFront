@@ -48,11 +48,11 @@ window.onload = function(){
         let p = document.getElementById('p3');
 
         p.innerHTML = `10 / 0 : ${num1} <br>`;
-        p.innerHTML = `10 / 'a' : ${num2} <br>`;
-        p.innerHTML = `num1 == Infinity : ${num1 == -Infinity} <br>`;
-        p.innerHTML = `num2 == NaN : ${num2 == NaN}<br>`;
-        p.innerHTML = `isFinite(num1) : ${isFinite(num1)} <br>`;
-        p.innerHTML = `isNaN(num2) : ${isNaN(num2)}<br>`;
+        p.innerHTML += `10 / 'a' : ${num2} <br>`;
+        p.innerHTML += `num1 == Infinity : ${num1 == -Infinity} <br>`;
+        p.innerHTML += `num2 == NaN : ${num2 == NaN}<br>`;
+        p.innerHTML += `isFinite(num1) : ${isFinite(num1)} <br>`;
+        p.innerHTML += `isNaN(num2) : ${isNaN(num2)}<br>`;
     });
 }
 

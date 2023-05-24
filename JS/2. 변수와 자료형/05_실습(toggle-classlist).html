@@ -37,15 +37,22 @@
     title.classList.toggle('clicked');
   }
 
-  const userName = document.querySelector('#desc p');
-  // 실습
-  userName.onclick = () =>{
-    userName.classList.toggle('blue-italic');
+  let users = document.getElementsByTagName('p');
+  for(user of users){
+    user.addEventListener('click', function(){
+      user.classList.toggle('blue-italic');
+    });
   };
 
-  let mode = document.querySelector('#mode');
+  // const userName = document.querySelector('#desc p');
+  //   // 실습
+  //   // 1. 이름을 클릭하면 calss속성 값에 blue-italic를 추가/삭제
+  // userName.onclick = () =>{
+  //   userName.classList.toggle('blue-italic');
+  // };
+  // 2. 모드변경 버튼을 클릭하면 body태그에 class속성 값에 dark를 추가/삭제  
   mode.onclick = () =>{
-    Document.body.classList.toggle('dark');
+    document.body.classList.toggle('dark');
   };
   
 </script>
