@@ -28,7 +28,7 @@ window.onload = function(){
         // 화살표 함수에서는 this가 없음
         // 상위 요소의 this를 찾아서 반환 
         console.log('this',this);
-        console.log('e',e);
+        console.log('e',e.target);
     }
 
     btn3.addEventListener('click',clickEventHandler);
@@ -42,29 +42,29 @@ window.onload = function(){
     // 2. 이벤트가 발생한 요소 객체에 접근하는 방법
     // 1) 고전 이벤트 방식
     btn4.onclick = function(e){
-    console.log(e.target);
-    console.log(this);
-    console.log(window.event.target);
+    console.log('e.target',e.target);
+    console.log('this',this);
+    console.log('window.event.target', window.event.target);
     };
 
     btn4.onclick = (e)=>{
-        console.log(e.target);
+        console.log('e.target',e.target);
         // 이벤트 발생요소가 아님
-        // console.log(this); // 화살표 함수에서는 this가 가르키는 대상이 
-        console.log(window.event.target);
+        // console.log('this',this); // 화살표 함수에서는 this가 가르키는 대상이 다르다
+        console.log('window.event.target', window.event.target);
     };
 
     // 3) 표준 이벤트 모델
     btn5.addEventListener('click', function(e){
-        console.log(e.target);
-        console.log(this);  
-        console.log(window.event.target);
+        console.log('e.target', e.target);
+        console.log('this',this);  
+        console.log('window.event.target', window.event.target);
     });
 
     btn5.addEventListener('click',(e)=>{
-        console.log(e.target);
-        console.log(this);  
-        console.log(window.event.target);
+        console.log('e.target',e.target);
+        // console.log('this',this);  
+        console.log('window.event.target',window.event.target);
     });
     
     submit.addEventListener('click', function(e){
