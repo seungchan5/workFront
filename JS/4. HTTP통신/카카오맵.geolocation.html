@@ -9,9 +9,17 @@
 <p style="margin-top:-12px">
     <b>Chrome 브라우저는 https 환경에서만 geolocation을 지원합니다.</b> 참고해주세요.
 </p>
+<!-- 지도를 표시해주는 영역 -->
 <div id="map" style="width:100%;height:350px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	7f5f612c37590a5d3b0a2cfec0c466a4"></script>
+<!-- 
+    api를 사용 
+    발급받은 키를 입력해야함
+
+    * 주소 변경 : localhost
+    * 주소 추가 : 내 애플리케이션 - 플랫폼 - Web - 사이트 도메인 추가
+-->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7f5f612c37590a5d3b0a2cfec0c466a4"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
