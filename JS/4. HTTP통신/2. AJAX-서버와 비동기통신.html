@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JSON</title>
   <link rel="stylesheet" href="css/student.css">
+  
 </head>
 <body>
   <div id="container">
@@ -14,5 +15,28 @@
     <div id="result"></div>
   </div>
 
+<script>
+  let xhr = new XMLHttpRequest();
+
+  xhr.open('get','json/student-2.json');
+
+  xhr.send();
+
+  xhr.onreadystatechange = function(){
+    let res = document.querySelector('#result');
+
+    if(xhr.readyState === 4 && xhr.status === 200 ){
+      console.log(xhr.responseText);
+
+      let jsObj = JSON.parse(xhr.responseText);
+
+      for(obj of jsObj){
+        res.innerHTML += `
+        ${obj.name} , ${obj.major}, ${obj.grade}
+        <br>`;
+      }
+    }
+  }
+</script>
 </body>
 </html>
