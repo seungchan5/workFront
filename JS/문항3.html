@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item{
+            text-align: center;
+            font-weight: bolder;
+        }
+        #last{
+            text-align: center;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="" method='post'>
+        <button id='join'>회원가입하기</button>
+        <table border='1' class='tables'>
+                <caption>회원 가입폼</caption>
+                <tr>
+                    <td id='item'>ID</td>
+                    <td><input type="text" id='ID'> <button id='idtest'>ID중복검사</button></td>
+                </tr>
+                <tr>
+                    <td id='item'>비밀번호</td>
+                    <td><input type="password" id="userPw"></td>
+                </tr>
+                <tr>
+                    <td id='item'>성명</td>
+                    <td><input type="text" id="userName"></td>
+                </tr>
+                <tr>
+                    <td id='item'>E-Mail</td>
+                    <td><input type='text' id='userEmail'>@<input type='text'>
+                        <select name='emailAddr' id='emailAddr'>
+                            <optgroup>
+                                <option value='etc' label='직접입력' selected>직접입력</option>
+                                <option value='naver.com' label='naver.com'>naver.com</option>
+                                <option value='gmail.com' label='gmail.com'>gmial.com</option>
+                                <option value='daum.net' label='daum.net'>daum.net</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id='item'>핸드폰</td>
+                    <td><select name='phone' id='phone'>
+                        <optgroup>
+                            <option value='etc' label='번호선택' selected>번호선택</option>
+                            <option value='010' label='010'>010</option>
+                            <option value='011' label='011'>011</option>
+                            <option value='016' label='016'>016</option>
+                        </optgroup>
+                        </select>
+                        <input type="text">-<input type='text'>
+                    </td>
+                </tr>
+                <tr>
+                    <td id='item'>성별</td>
+                    <td>
+                        <input type="radio" name="gender" id="m">
+                        <label for="m">남자</label>
+                        <input type="radio" name="gender" id="w">
+                        <label for='w'>여자</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td id='item'>취미</td>
+                    <td>
+                        <input type="checkbox" name="hobby" id="study" value='study'>
+                        <label for='study'>공부</label>
+                        <input type="checkbox" name="hobby" id="hiking" value='hiking'>
+                        <label for='hiking'>등산</label> 
+                        <input type="checkbox" name="hobby" id="game" value='game'>
+                        <label for='game'>게임</label> 
+                        <input type="checkbox" name="hobby" id="fishing" value='fishing'>
+                        <label for='fishing'>낚시</label>
+                        <input type="checkbox" name="hobby" id="shopping" value='shopping'>
+                        <label for='shopping'>쇼핑</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td id='item'>자기소개</td>
+                    <td><textarea name="tarea" id="tarea" cols="80" rows="5" placeholder='자기소개를 100자 이내로 입력하세요'></textarea></td>
+                </tr>
+                <tr id='last'>
+                    <td colspan='2'><button type='sumit'>회원가입</button> <button type='reset'>취소</button></td>
+                </tr>
+            </table>
+    </form>
+    <script>
+        window.onload = function(){
+        join.addEventListener('click', function(){
+         tables.classList.toggle('hidden');
+    });
+    }
+    </script>
+</body>
+</html>
